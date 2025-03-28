@@ -6,7 +6,7 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 22:12:06 by buramert          #+#    #+#             */
-/*   Updated: 2025/03/28 08:03:57 by buramert         ###   ########.fr       */
+/*   Updated: 2025/03/28 08:30:05 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	add_line(t_gamecntrl *game, char *line)
 	return (1);
 }
 
-int	map_reading(t_gamecntrl *game, char **argv)
+int	 map_reading(t_gamecntrl *game, char **argv)
 {
 	char	*readmap;
 	int		i;

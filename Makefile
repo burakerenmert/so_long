@@ -19,7 +19,8 @@ $(LIBFT):
 $(MINILIBX):
 	@make -C $(MINILIBX_DIR)
 $(NAME): $(OBJS) $(FT_PRINTF) $(LIBFT) $(MINILIBX)
-	cc $(CFLAGS) $(OBJS) $(FT_PRINTF) $(LIBFT) $(MINILIBX) $(LFLAGS) -o $(NAME)
+	gcc $(CFLAGS) $(OBJS) $(LFLAGS) $(FT_PRINTF) $(LIBFT) $(MINILIBX) -o $(NAME)
+
 clean:
 	rm -rf *.o
 	@make -C ft_printf clean

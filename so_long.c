@@ -6,7 +6,7 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 22:12:06 by buramert          #+#    #+#             */
-/*   Updated: 2025/03/28 08:04:01 by buramert         ###   ########.fr       */
+/*   Updated: 2025/03/28 09:28:58 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,22 @@ int	ft_exit(t_gamecntrl *game)
 	free(game->map);
 	exit(0);
 }
+void	*ft_exit_2(t_gamecntrl *game)
+{
+	int	line;
+
+	line = 0;
+	destroy_images(game);
+	if (game->winpointer)
+		mlx_destroy_window(game->mlxpointer, game->winpointer);
+	if (game->mlxpointer)
+		mlx_destroy_display(game->mlxpointer);
+	free(game->mlxpointer);
+	while (line < game->heightmap)
+		free(game->map[line++]);
+	free(game->map);
+	exit(0);
+}
 
 int	main(int argc, char **argv)
 {
@@ -60,7 +76,7 @@ int	main(int argc, char **argv)
 		place_images_in_game(&game);
 		place_graphics(&game);
 		mlx_key_hook(game.winpointer, controls_manager, &game);
-		mlx_hook(game.winpointer, 17, 0, exit, 0);
+		mlx_hook(game.winpointer, 17, 0, ft_exit_2(&game), 0);
 		mlx_loop(game.mlxpointer);
 	}
 	return (0);
