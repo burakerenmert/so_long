@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
+/*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/14 23:03:15 by dsonmez           #+#    #+#             */
-/*   Updated: 2025/03/27 23:19:49 by burakerenme      ###   ########.fr       */
+/*   Created: 2025/03/15 22:12:06 by buramert          #+#    #+#             */
+/*   Updated: 2025/03/28 08:04:01 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
